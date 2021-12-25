@@ -1,4 +1,5 @@
 export default Object.freeze({
     index: "/",
-    Login: "/Login/"
+    Login: "/Login/",
+    index: "/Dashboard/",
 })

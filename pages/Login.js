@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import styles from '../styles/Login.module.css'
 import routes from '../utils/routes';
 
-const Home = () => {
+const Login = () => {
     const router = useRouter();
 
     return (
@@ -13,7 +13,7 @@ const Home = () => {
                 <div className={styles.logo}></div>
                 <div className={styles.title}>Sign In</div>
                 <div className={styles.card}>
-                    <form action='' method='post'>
+                    <form action='./test/' method='post'>
                         <label className={styles.label}>Username</label>
                         <input type='text' className={styles.input} name='username' placeholder='Enter Username'></input>
                         <label className={styles.label}>Password</label>
@@ -33,4 +33,4 @@ const Home = () => {
 }
 
 
-export default Home;
+export default Login;
