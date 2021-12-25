@@ -1,7 +1,7 @@
+import routes from '../utils/routes';
 import { useRouter } from 'next/router';
 import Button from '../components/Button';
 import styles from '../styles/Home.module.css'
-import routes from '../utils/routes';
 
 const Home = () => {
   const router = useRouter();
