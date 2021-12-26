@@ -19,13 +19,13 @@ const Login = () => {
         e.preventDefault()
         setLoading(true)
         const user = await authApi.login(loginData);
-        
+
         if(!user) {
             setLoading(false);
             return setError(true)
         }
 
-        if(user.isTeacher) router.replace(routes.TeacherDashboard);
+        if(user.isTeacher) return router.replace(routes.TeacherDashboard);
 
         router.replace(routes.Dashboard);
     }
