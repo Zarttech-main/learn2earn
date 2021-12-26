@@ -6,6 +6,7 @@ export default Object.freeze({
     Success: "/Success/",
     Earnings: "/Earning/",
     Marketplace: "/Marketplace/",
-    TeacherDashboard: "/teacher/tests",
-    Manage: "teacher/manage/tests",
+    TeacherDashboard: "/teacher/",
+    AddTest: "/teacher/addtest/",
+    Buy: "/teacher/buy/",
 })

@@ -3,11 +3,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import Button from '../components/Button';
-import styles from '../styles/Login.module.css'
-import routes from '../utils/routes';
-import authApi from './api/auth';
 import Image from 'next/image';
+import authApi from './api/auth';
+import routes from '../utils/routes';
+import styles from '../styles/Login.module.css'
 
 const Login = () => {
     const [error, setError] = useState()
@@ -69,6 +68,5 @@ const Login = () => {
         </>
     )
 }
-
 
 export default Login;

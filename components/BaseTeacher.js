@@ -37,10 +37,10 @@ const TeacherDashboard = ({ children }) => {
                             <a href=''><label>The Dashboard</label></a>
                         </li>
                     </Link>
-                    <Link href={routes.Manage}>
+                    <Link href={routes.AddTest}>
                         <li className={styles.tab}>
                             <FontAwesomeIcon icon={faBook} height={20}></FontAwesomeIcon>
-                            <a href=''><label>Manage Tests</label></a>
+                            <a href=''><label>Add Test</label></a>
                         </li>
                     </Link>
                     <Link href={routes.Login}>
