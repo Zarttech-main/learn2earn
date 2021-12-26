@@ -35,3 +35,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.submitButton {
+    background-color: red;
+}
+.submitContainer {
+    display: flex;
+    justify-content: end;
+}
