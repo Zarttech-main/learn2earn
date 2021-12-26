@@ -1,0 +1,22 @@
+.title {
+    width: 60%;
+}
+
+.title h4 {
+    color: grey;
+    float: left;
+    font-size: 30px;
+    margin: 0px;
+    padding: 10px 0px 20px 20px;
+}
+
+.title label {
+    float: right;
+    font-size: 20px;
+    color: grey;
+}
+
+.form {
+    display: block;
+    margin: 20px;
+}
