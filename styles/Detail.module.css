@@ -1,0 +1,37 @@
+.assignment {
+    width: 30vw;
+    padding: 10px;
+    min-height: 100px;
+    margin-bottom: 20px;
+    background: rgba(13, 104, 195, 0.12);
+}
+.question_title {
+    font-size: 15px;
+    font-weight: 500;
+}
+.question {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.title {
+    font-size: 30px;
+}
+.option {
+    margin-bottom: 10px;
+}
+.img {
+    margin: 20px 0 20px 0;
+}
+.paging {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+.paging div {
+    width: 50px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+}

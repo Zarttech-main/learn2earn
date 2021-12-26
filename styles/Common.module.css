@@ -10,3 +10,16 @@
     border-radius: 10px;
     background: var(--primary-color);
 }
+
+.button:hover {
+    border: 0;
+    width: 400px;
+    height: 80px;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 10px;
+    background: #D10B0C;
+}

@@ -1,8 +1,9 @@
 export default Object.freeze({
     index: "/",
     Login: "/Login/",
-    Dashboard: "/Dashboard/",
+    Dashboard: "/test/",
     Earnings: "/Earnings/",
     Wallet: "/Wallet",
-    Marketplace: "/Marketplace/"
+    Marketplace: "/Marketplace/",
+    Success: "/Success/"
 })

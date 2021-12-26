@@ -1,0 +1,103 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    background-color: white;
+}
+
+.header {
+    background-color: #f9f9f9;
+    height: 100px;
+    padding: 20px;
+}
+
+li .logo {
+    height: 60px;
+    background-image: url(../public/ag-logo.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+li.small {
+    width: 20%;
+    padding-left: 20px;
+    float: left;
+    list-style-type: none;
+}
+
+li.long {
+    width: 100%;
+    padding-right: 150px;
+    float: inherit;
+    text-align: right;
+    list-style-type: none;
+}
+
+.topmenu {
+    margin: 20px auto;
+}
+
+.userName {
+    color: var(--primary-color);
+}
+
+.userName span {
+    margin-right: 30px;
+    color: grey;
+    font-weight: 500;
+}
+
+.leftbar {
+    float: left;
+    position: fixed;
+    width:20%;
+    height: 100%;
+    padding: 50px 0px;
+    background-color: #f9f9f9;
+}
+
+.leftbar .tab {
+    background-color: white;
+    list-style-type: none;
+    padding: 25px 50px;
+    margin: 10px 0px;
+    cursor: pointer;
+
+}
+
+.leftbar .tab:hover, .leftbar .tab:active{
+    background-color: #D3E2F0;
+    list-style-type: none;
+    padding: 25px 50px;
+    margin: 10px 0px;
+    cursor: pointer;
+    color: rgb(63, 63, 63);
+
+}
+
+.leftbar .tab label {
+    font-weight: 500;
+    padding-left: 40px;
+
+}
+
+.leftbar .tab {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.leftbar .tab:hover, .leftbar .tab:active, .leftbar .tab:hover .leftbar .tab label {
+    color: var(--secondary-color)
+}
+
+.card {
+    padding: 50px;
+    margin-left: 20%;
+    width: 80%;
+    float: left;
+    color: grey;
+}
