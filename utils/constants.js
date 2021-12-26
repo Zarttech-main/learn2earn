@@ -632,3 +632,95 @@ export const assignments = [
         ]
     },
 ]
+
+export const users = [
+    {
+        username: "tea",
+        password: "pass123",
+        isTeacher: true,
+    },
+    {
+        username: "tea1",
+        password: "pass123",
+        isTeacher: true,
+    },
+    {
+        username: "user",
+        password: "pass123",
+    },
+    {
+        username: "user2",
+        password: "pass123",
+    }
+]
+
+export const earnings = [
+    {
+        amount: 0.3,
+        totalConfirmations: 0,
+        timestamp: "27-12-2021 09:11:00",
+    },
+    {
+        amount: 0.1,
+        totalConfirmations: 2,
+        timestamp: "24-12-2021 08:33:00",
+    },
+    {
+        amount: 0.05,
+        totalConfirmations: 2,
+        timestamp: "23-12-2021 08:22:00",
+    },
+    {
+        amount: 0.02,
+        totalConfirmations: 2,
+        timestamp: "20-12-2021 02:22:00",
+    },
+    {
+        amount: 0.04,
+        totalConfirmations: 3,
+        timestamp: "18-12-2021 09:29:00",
+    },
+]
+
+export const products = [
+    {
+       name:"Men's Wear [Jacket]",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png",
+       price: 0.3
+    },
+    {
+       name:"Women's Jacket",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-better-than-naked-jacket-AVKL_NN4_hero.png",
+       price: 0.2
+    },
+    {
+       name:"WOMEN'S SINGLE-TRACK SHOE",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-single-track-shoe-ALQF_JM3_hero.png",
+      price: 0.6
+    },
+    {
+       name:"Enduro Hydration Pack",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/enduro-boa-hydration-pack-AJQZ_JK3_hero.png",
+      price: 0.1
+    },
+    {
+       name:"Men Tshirt",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png",
+      price: 0.09
+    },
+    {
+       name:"Women Nice Wear",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-better-than-naked-jacket-AVKL_NN4_hero.png",
+      price: 0.8
+    },
+    {
+       name:"Nice Lady's Shoe",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/womens-single-track-shoe-ALQF_JM3_hero.png",
+       price: 0.3
+    },
+    {
+       name:"Hydration Pack",
+       url:"http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/enduro-boa-hydration-pack-AJQZ_JK3_hero.png",
+       price: 0.89
+    }
+ ]

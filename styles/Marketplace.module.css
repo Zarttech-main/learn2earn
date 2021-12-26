@@ -1,0 +1,70 @@
+.title h4 {
+    color: var(--primary-color);
+    font-size: 30px;
+    margin: 0px;
+    padding: 10px 0px 20px 20px;
+}
+
+.content {
+    float: left;
+    width: 230px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    transition: 0.6s ease-in;
+    background-color: #F5F0F0;
+}
+
+.content:hover {
+    background-color: #dfc9c9;
+}
+
+.content img {
+    transition: 0.6s ease-in;
+}
+
+.content:hover img {
+    transform: scale(2);
+}
+
+.content p {
+    padding: 0px;
+    margin: 0px 0px 5px 0px;
+}
+
+.content p span {
+    color: rgb(49, 49, 49);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content p label {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.content .product {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 150px;
+    padding: 20px;
+}
+
+
+.form select, .form input {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: grey;
+    border: none;
+    margin: 20px;
+    outline: none;
+    background-color: #E2EDF8;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
