@@ -23,3 +23,7 @@
     border-radius: 10px;
     background: #D10B0C;
 }
+
+.disabled {
+    background-color: #ddd !important;
+}

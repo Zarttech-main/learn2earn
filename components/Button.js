@@ -2,9 +2,10 @@ import React from 'react'
 
 import styles from '../styles/Common.module.css'
 
-const Button = ({ onClick, title, style }) => {
+const Button = ({ onClick, title, style, disabled }) => {
+    const disabledButton = disabled ? "disabled" : ""
     return (
-        <button className={`${styles.button} ${style}`} onClick={onClick}>{title}</button>
+        <button {...disabledButton} className={`${styles.button} ${style} ${disabled && styles.disabled}`} onClick={onClick}>{title}</button>
     )
 }
 
