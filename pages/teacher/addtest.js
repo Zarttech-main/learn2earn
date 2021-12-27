@@ -1,11 +1,15 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import Base from "../../components/BaseTeacher";
 
+import routes from "../../utils/routes";
 import styles from "../../styles/AddTest.module.css";
 import commonStyles from "../../styles/Common.module.css";
 import formStyles from "../../styles/FormControls.module.css";
 
 const SetQuestionPageOne = () => {
+    const router = useRouter()
+
     return (
         <>
         <Head>
@@ -177,7 +181,7 @@ const SetQuestionPageOne = () => {
                             <button className={styles.addNewBtnLg}>Add Question +</button>
                         </div>
 
-                        <button className={styles.btnPrimaryBlue}>Continue</button>
+                        <button className={styles.btnPrimaryBlue} onClick={() => router.push(routes.Allocate)}>Continue</button>
                     </form>
                 </div>
             </div>

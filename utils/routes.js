@@ -9,4 +9,6 @@ export default Object.freeze({
     TeacherDashboard: "/teacher/",
     AddTest: "/teacher/addtest/",
     Buy: "/teacher/buy/",
+    Allocate: "/teacher/allocate/",
+    TeacherSuccess: "/teacher/success/",
 })

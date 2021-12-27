@@ -635,12 +635,12 @@ export const assignments = [
 
 export const users = [
     {
-        username: "tea",
+        username: "teacher",
         password: "pass123",
         isTeacher: true,
     },
     {
-        username: "tea1",
+        username: "teacher1",
         password: "pass123",
         isTeacher: true,
     },
@@ -649,7 +649,7 @@ export const users = [
         password: "pass123",
     },
     {
-        username: "user2",
+        username: "user1",
         password: "pass123",
     }
 ]

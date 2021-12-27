@@ -2,21 +2,46 @@
     width: 60%;
 }
 
-.title h4 {
-    color: grey;
-    float: left;
-    font-size: 30px;
-    margin: 0px;
-    padding: 10px 0px 20px 20px;
+.title table {
+    width: 700px;
+    margin-left: 20px;
 }
 
-.title label {
-    float: right;
+.title table tr td h4 {
+    font-size: 30px;
+    color: grey;
+}
+
+.title table tr td label {
     font-size: 20px;
     color: grey;
 }
 
 .form {
-    display: block;
     margin: 20px;
+}
+
+.form label {
+    font-size: 20px;
+    color: grey;
+    margin-bottom: 50px;
+}
+
+.form input {
+    padding: 15px 20px;
+    margin-top: 20px;
+    color: grey;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 500px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.form input.submit {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
 }

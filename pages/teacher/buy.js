@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link"
 import { useState } from "react"
 
 import Base from "../../components/BaseTeacher"
@@ -28,7 +29,7 @@ const Buy = () => {
             </Head>
             <Base>
                 <div className={styles.container}>
-                    <h1 className={styles.title}>Buy ETH</h1>
+                    <h1 className={styles.title}>Buy AceIt</h1>
 
                     <div className={styles.fields}>
                         <div>
@@ -37,14 +38,17 @@ const Buy = () => {
                         </div>
 
                         <div>
-                            <label className={styles.label}>Wallet Address *</label>
-                            <input required placeholder="Enter Wallet Address" className={styles.input} type="text" name="wallet" onChange={(e) => setdDta({ ...data, wallet: e.target.value})} />
+                            <label className={styles.label}>
+                                <Link href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">
+                                    You need to install metamask extension for this page to work properly, click here to install metamask
+                                </Link>
+                                </label>
                         </div>
                     </div>
                 </div>
                 <div className={styles.submitContainer}>
                     { error && <div className={styles.error}>Both fields are required</div>}
-                    <Button style={styles.button} title="Buy" onClick={handleBuy} />
+                    <Button style={styles.button} title="Buy Token" onClick={handleBuy} />
                 </div>
             </Base>
         </>

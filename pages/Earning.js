@@ -11,13 +11,16 @@ const Earnings = () => {
             </Head>
             <div>
                 <Base>
-                    <div className={styles.title}><h4>My Earnings</h4></div>
+                    <div className={styles.title}>
+                        <h4>My Earnings</h4>
+                        <h3>Total Earnings: 300 AceIt</h3>
+                    </div>
                     <div className={styles.content}>
                         {
                             earnings.map(earning => 
                                 <>
                                     <div className={styles.earnContainer}>
-                                        <p>{earning.amount}ETH</p>
+                                        <p>{earning.amount} AceIt</p>
                                         <div className={styles.earnInfo}>
                                             <span>{ earning.totalConfirmations } / 3 Confirmations</span>
                                             <span>{earning.timestamp}</span>
