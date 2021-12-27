@@ -6,7 +6,7 @@
 }
 
 .content {
-    width: 500px;
+    width: 38vw;
     margin-left: 20px;
 }
 
@@ -37,4 +37,35 @@
 .hr {
     color: rgba(255, 0, 0, 0.1);
     background-color: rgba(221, 221, 221, 0.1);
+}
+
+.header {
+    width: 40vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #E2EDF8;
+}
+
+.header div {
+    margin: 0 20px;
+}
+
+.header div span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header div svg {
+    margin: 5px 20px;
+}
+
+.arrowsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--primary-color);
 }

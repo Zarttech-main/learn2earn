@@ -2,8 +2,19 @@ import Head from "next/head";
 import Base from "../components/Base"
 import { earnings } from "../utils/constants";
 import styles from "../styles/Earning.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import helpers from "../utils/helpers";
+import { useEffect, useState } from "react";
 
 const Earnings = () => {
+    const [totalBalance, setTotalBalance] = useState(0)
+
+    useEffect(() => {
+        const total = helpers.sumObjectValue(earnings, "amount");
+        setTotalBalance(total);
+    })
+
     return (
         <>
             <Head>
@@ -11,10 +22,19 @@ const Earnings = () => {
             </Head>
             <div>
                 <Base>
-                    <div className={styles.title}>
-                        <h4>My Earnings</h4>
-                        <h3>Total Earnings: 300 AceIt</h3>
-                    </div>
+                    <div className={styles.title}><h4>My Earnings</h4></div>
+                    <header className={styles.header}>
+                        <div>
+                            <span className={styles.balance}>{totalBalance} AceIt</span>
+                        </div>
+                        <div className={styles.arrowsContainer}>
+                            <FontAwesomeIcon icon={faArrowLeft} height={30} />
+                            <FontAwesomeIcon icon={faArrowRight} height={30} />
+                        </div>
+                        <div>
+                            <span>{helpers.aceItToEther(totalBalance)} Eth</span>
+                        </div>
+                    </header>
                     <div className={styles.content}>
                         {
                             earnings.map(earning => 
