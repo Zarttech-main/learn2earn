@@ -22,7 +22,6 @@
     /* background-color: red; */
 }
 
-
 .imgType .featuredImg {
     margin-right: 1em;
     height: 80px;
@@ -32,7 +31,6 @@
     /* flex-basis: 20%; */
 }
 
-
 .questionListing {
     padding: 0;
 }
@@ -40,7 +38,6 @@
 .questionListing li {
     list-style: none;
 }
-
 
 .flexAlignCenterJustifyBetween {
     display        : flex;
@@ -121,4 +118,5 @@
     padding-left    : 3rem !important;
     padding-right   : 3rem !important;
     height          : 45px;
+    cursor: pointer;
 }

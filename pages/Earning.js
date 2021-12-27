@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 const Earnings = () => {
     const [totalBalance, setTotalBalance] = useState(0);
     const router = useRouter();
+    const [viewAll, setViewAll] = useState(false)
 
     useEffect(() => {
         const total = helpers.sumObjectValue(earnings, "amount");
@@ -43,7 +44,7 @@ const Earnings = () => {
                     </header>
                     <div className={styles.content}>
                         {
-                            earnings.map(earning => 
+                            (viewAll ? earnings : earnings.slice(0, 2)).map(earning => 
                                 <>
                                     <div className={styles.earnContainer}>
                                         <p>{earning.amount} AceIt</p>
@@ -56,6 +57,7 @@ const Earnings = () => {
                                 </>
                             )
                         }
+                        <p onClick={() => setViewAll(true)}>View All</p>
                     </div>
                 </Base>
             </div>
