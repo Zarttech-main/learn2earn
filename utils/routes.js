@@ -4,11 +4,11 @@ export default Object.freeze({
     Wallet: "/Wallet",
     Dashboard: "/test/",
     Success: "/Success/",
+    Buy: "/teacher/buy/",
     Earnings: "/Earning/",
+    AddTest: "/teacher/addtest/",
     Marketplace: "/Marketplace/",
     TeacherDashboard: "/teacher/",
-    AddTest: "/teacher/addtest/",
-    Buy: "/teacher/buy/",
     Allocate: "/teacher/allocate/",
     TeacherSuccess: "/teacher/success/",
 })

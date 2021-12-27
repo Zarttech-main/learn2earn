@@ -46,9 +46,15 @@
     align-items: center;
     border-radius: 10px;
     justify-content: center;
+    flex-direction: column;
     background-color: #E2EDF8;
 }
-
+.headerTop {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+}
 .header div {
     margin: 0 20px;
 }
@@ -58,14 +64,37 @@
     font-weight: bold;
 }
 
+.balance {
+    color: var(--seconary-color);
+}
+
+.balanceEqv {
+    color: var(--primary-color);
+}
+
 .header div svg {
     margin: 5px 20px;
 }
 
+.header div svg:nth-child(1) {
+    color: var(--primary-color);
+}
+
+.header div svg:nth-child(2) {
+    color: var(--secondary-color);
+}
 .arrowsContainer {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    color: var(--primary-color);
+}
+.button {
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
 }
