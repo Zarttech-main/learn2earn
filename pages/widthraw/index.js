@@ -60,7 +60,7 @@ const WithdrawToken = () => {
                 <div className={styles.form}>
                     <form onSubmit={handleSubmit} method='post'>
                         <label>Amount of AceIt</label>
-                        <label className={styles.label2}>Ether</label>
+                        <label className={styles.label2}>Metis</label>
                         <div>
                             <input type='text' name='' placeholder='0.00' onChange={handleChange}></input>
                             <FontAwesomeIcon icon={faExchangeAlt} height={20}></FontAwesomeIcon>
