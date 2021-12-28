@@ -1,0 +1,35 @@
+.title {
+    width: 100%;
+}
+
+.title h4 {
+    font-size: 35px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.image {
+    background-image: url(../public/teacherillustration.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button a {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 40px;
+    width: 200px;
+}

@@ -1,0 +1,42 @@
+.pageWrapper{
+    padding-left: 1.5px;
+    padding-right: 1.5px;
+}
+.pageTitle{
+    color: #0d68c3;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 3em;
+}
+
+
+.formWrapper {
+    max-width: 600px;
+}
+
+.confirmBtn, .earningsBtn{
+    border    : none;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    padding: 1.175rem 2.2rem;
+}
+
+.confirmBtn:focus, .earningsBtn:focus {
+    border    : none;
+    outline   : 0;
+    box-shadow: none;
+  }
+
+.confirmBtn{
+    background-color: #0D68C3;
+    color: #ffffff;
+    border: none;
+    transition: all 300ms ease-in-out;
+}
+.earningsBtn{
+    color           : #0d68c3;
+    background-color: unset;
+    border          : none;
+
+}

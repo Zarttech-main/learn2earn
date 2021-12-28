@@ -1,0 +1,93 @@
+.select,
+.formControl {
+    width        : 100%;
+    border       : 0;
+    background-color: #eef6f9fa;
+    padding      : 0.5em 0.6em;
+    font-size    : .88rem;
+    border-radius: 10px;
+    padding : 0 20px;
+    height       : 45px;
+}
+
+.select {
+    border: none;
+}
+
+.select:focus,
+.formControl:focus {
+    outline   : 0;
+    box-shadow: none;
+}
+
+.inputGroup {
+    position      : relative;
+    display       : -ms-flexbox;
+    display       : flex;
+    -ms-flex-wrap : wrap;
+    flex-wrap     : wrap;
+    -ms-flex-align: stretch;
+    align-items   : stretch;
+    width         : 100%;
+    background    : #ebdfdf80;
+    border-radius : 10px;
+    padding-left  : .3em;
+    padding-right : .3em;
+}
+
+.inputGroup .formControl {
+    position        : relative;
+    -ms-flex        : 1 1 auto;
+    flex            : 1 1 auto;
+    width           : 1%;
+    min-width       : 0;
+    margin-bottom   : 0;
+    border          : none;
+    background-color: unset;
+}
+
+.inputGroupAppend .btn {
+    height          : 100%;
+    border          : none;
+    background-color: unset;
+    cursor          : pointer;
+}
+
+.selectDropWrapper {
+    position     : relative;
+    padding-left : 1.5em;
+    padding-right: 2em;
+    border-radius: 6px;
+    cursor       : pointer;
+    background   : #E2EDF8;
+    display      : flex;
+    align-items  : center;
+}
+
+.selectDropWrapper select {
+    background-color: unset;
+    cursor          : pointer;
+    border          : none;
+}
+
+
+.label {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.controlList{
+    padding-left: 0;
+    margin-bottom: 1.5em;
+}
+
+.controlList li{
+    list-style: none;
+}

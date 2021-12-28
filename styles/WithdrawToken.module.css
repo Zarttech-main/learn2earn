@@ -1,0 +1,60 @@
+.title h4 {
+    color: var(--primary-color);
+    font-size: 30px;
+    margin: 0px;
+    padding: 10px 0px 20px 20px;
+}
+
+.form {
+    margin-top: 40px;
+}
+
+
+.form label {
+    font-size: 20px;
+    margin-left: 20px;
+    color: grey;
+    margin-bottom: 50px;
+}
+
+.form label.label2 {
+    font-size: 20px;
+    margin-left: 230px;
+    color: grey;
+    margin-bottom: 50px;
+}
+
+.form span {
+    margin-left: 20px;
+}
+
+.form input {
+    padding: 15px 20px;
+    margin: 20px 40px 20px 20px;
+    color: grey;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 300px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.form input.submit {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: var(--primary-color);
+}
+
+.disabled {
+    background-color: #ddd !important;
+}

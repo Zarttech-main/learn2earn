@@ -1,0 +1,100 @@
+.title h4 {
+    color: var(--primary-color);
+    font-size: 30px;
+    margin: 0px;
+    padding: 10px 0px 20px 20px;
+}
+
+.content {
+    width: 38vw;
+    margin-left: 20px;
+}
+
+.content p {
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content p label {
+    float: right;
+}
+
+.content span {
+    font-size: 15px;
+}
+
+.earnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.earnInfo {
+    display: flex;
+    justify-content: space-between;
+}
+.hr {
+    color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(221, 221, 221, 0.1);
+}
+
+.header {
+    width: 40vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #E2EDF8;
+}
+.headerTop {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+}
+.header div {
+    margin: 0 20px;
+}
+
+.header div span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.balance {
+    color: var(--seconary-color);
+}
+
+.balanceEqv {
+    color: var(--primary-color);
+}
+
+.header div svg {
+    margin: 5px 20px;
+}
+
+.header div svg:nth-child(1) {
+    color: var(--primary-color);
+}
+
+.header div svg:nth-child(2) {
+    color: var(--secondary-color);
+}
+.arrowsContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.button {
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}

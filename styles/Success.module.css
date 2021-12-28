@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    margin-right: 20%;
+    align-items: center;
+    flex-direction: column;
+}
+.img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-size: 100px;
+    background-position: center;
+    background-image: url(../public/success.png);
+}
+.title {
+    color: var(--primary-color);
+}

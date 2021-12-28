@@ -121,3 +121,17 @@
     border-radius: 10px;
     background: var(--secondary-color);
 }
+.error {
+    font-size: 14px;
+    margin: 20px 50px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+.disabled {
+    background-color: rgba(219, 225, 223, 0.865);
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

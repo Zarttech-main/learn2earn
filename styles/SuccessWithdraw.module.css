@@ -1,0 +1,32 @@
+.title {
+    width: 100%;
+}
+
+.title h4 {
+    font-size: 35px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.image {
+    text-align: center;
+    align-items: center;
+    margin: 60px;
+    color: var(--primary-color);
+}
+
+.button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button a {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 40px;
+    width: 200px;
+}

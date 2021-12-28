@@ -1,0 +1,54 @@
+.container {
+    margin-left: 20px;
+}
+.title {
+    font-size: 30px;
+}
+.smallcard {
+    background-color: #E2EDF8;
+    float: left;
+    padding: 5px 20px 20px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 320px;
+    cursor: pointer;
+}
+.smallcard:hover {
+    background-color: #bcd2e9;
+}
+.smallcard h5 {
+    font-size: 20px;
+    color: #0D68C3;
+    padding-bottom: 0px;
+}
+.smallcard p {
+    font-size: 16px;
+    color: grey;
+    padding: 0px;
+}
+.card {
+    background-color: #E2EDF8;
+    width: 40vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.button {
+    height: 30px;
+    border-radius: 50px;
+    width: 250px;
+    font-size: 14px;
+}
+.button:hover {
+    height: 30px;
+    border-radius: 50px;
+    width: 250px;
+    font-size: 14px;
+    background-color: var(--secondary-color);
+}
+.balanceLabel {
+    font-size: 14px;
+}
