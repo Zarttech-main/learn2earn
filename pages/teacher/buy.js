@@ -10,7 +10,7 @@ import helpers from "../../utils/helpers"
 
 const Buy = () => {
     const [error, setError] = useState();
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState(0); // AceIt : 300
     const [loading, setLoading] = useState(false);
     const [ethereum, setEthereum] = useState(null);
     const [transactonHash, setTransactionHash] = useState();

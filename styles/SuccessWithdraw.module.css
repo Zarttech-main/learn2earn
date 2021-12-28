@@ -30,3 +30,10 @@
     padding: 20px 40px;
     width: 200px;
 }
+
+.success {
+    font-size: 14px;
+    text-align: center;
+    margin-left: 450px;
+    color: var(--primary-color);
+}
