@@ -21,7 +21,7 @@ const SetQuestionPageOne = () => {
                     <h1 className={styles.pageTitle}>Set Question</h1>
                 </div>
                 <div className={styles.formWrapper}>
-                    <form>
+                    <form onSubmit={(e) => {e.preventDefault(); router.replace(routes.Allocate)}}>
                         <div className={formStyles.formGroup}>
                             <label htmlFor="testName" className={formStyles.label}>Enter Name of the Test</label>
                             <input placeholder="Test Name" type="text" className={formStyles.formControl} id="testName" />
@@ -181,7 +181,7 @@ const SetQuestionPageOne = () => {
                             <button className={styles.addNewBtnLg}>Add Question +</button>
                         </div>
 
-                        <button className={styles.btnPrimaryBlue} onClick={() => router.push(routes.Allocate)}>Continue</button>
+                        <button className={styles.btnPrimaryBlue} type="submit">Continue</button>
                     </form>
                 </div>
             </div>
