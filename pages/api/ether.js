@@ -1,7 +1,7 @@
 import { ethers } from 'ethers';
 import { ABI } from '../../utils/constants';
 
-const contractAddress = "0xf91c2Fdc5382f2B04Ab4ecde0B04c2eA4F32eEE1";
+const contractAddress = "0xf91c2Fdc5382f2B04Ab4ecde0B04c2eA4F32eEE1"; //0xf91c2Fdc5382f2B04Ab4ecde0B04c2eA4F32eEE1
 
 const getAccount = async () => {
     const { ethereum } = window
@@ -31,12 +31,11 @@ const _getContract = () => {
 
 const purchaseTokens = async ( { amount, account } ) => {
     try {
-
         //get a contract instance
         const contract = _getContract();
 
         // call a contract function
-        const trx = await contract?.purchaseTokens({ 
+        const trx = await contract?.purchaseTokens({
             from: account,
             gasLimit: 400000,
             value : ethers.utils.parseEther(amount.toString()),
