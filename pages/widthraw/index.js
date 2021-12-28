@@ -1,15 +1,15 @@
 import Base from "../../components/Base";
 import styles from "../../styles/WithdrawToken.module.css";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
+import Link from "next/link";
 import { useRouter } from "next/router";
 import routes from "../../utils/routes";
-import { useEffect, useState } from "react";
-import Link from "next/link";
 import helpers from "../../utils/helpers";
+import { useEffect, useState } from "react";
 import { earnings } from "../../utils/constants";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
 
 const WithdrawToken = () => {
     const router = useRouter();
@@ -28,12 +28,13 @@ const WithdrawToken = () => {
     }
 
     const handleSubmit = (e) => {
+        e.preventDefault();
+        if(!etherAmount) return alert("Enter amount")
         if(balance < helpers.etherToAceIt(etherAmount)){
             alert("Insuffient Funds")
             return
         }
         
-        e.preventDefault();
         router.push(routes.WidthrawSuccess);
     }
 

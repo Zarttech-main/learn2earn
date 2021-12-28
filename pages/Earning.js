@@ -44,9 +44,9 @@ const Earnings = () => {
                     </header>
                     <div className={styles.content}>
                         {
-                            (viewAll ? earnings : earnings.slice(0, 2)).map(earning => 
+                            (viewAll ? earnings : earnings.slice(0, 2)).map((earning, index) => 
                                 <>
-                                    <div className={styles.earnContainer}>
+                                    <div className={styles.earnContainer} key={index}>
                                         <p>{earning.amount} AceIt</p>
                                         <div className={styles.earnInfo}>
                                             <span>{ earning.totalConfirmations } / 3 Confirmations</span>
