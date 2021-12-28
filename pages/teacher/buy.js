@@ -24,7 +24,7 @@ const Buy = () => {
         if(!account) return setLoading(false);
 
         const etherAmount = helpers.aceItToEther(amount);
-        const hash = contractApi.purchaseTokens({ account, amount: etherAmount });
+        const hash = await contractApi.purchaseTokens({ account, amount: etherAmount });
         setTransactionHash(hash);
 
         setLoading(false);
