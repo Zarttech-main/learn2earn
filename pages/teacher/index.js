@@ -24,7 +24,7 @@ const Tests = () => {
                             <h3 className={styles.balance}>0.0057 ETH</h3>
                             <h4 className={styles.balanceLabel}>Available wallet balance</h4>
 
-                            <Button style={styles.button} title="Buy ETH" onClick={() => router.push(routes.Buy)} />
+                            <Button style={styles.button} title="Buy AceIt" onClick={() => router.push(routes.Buy)} />
                         </div>
 
                         <h4>Recently added tests</h4>
