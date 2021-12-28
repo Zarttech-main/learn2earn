@@ -37,7 +37,7 @@ const Earnings = () => {
                                 <FontAwesomeIcon icon={faArrowRight} height={30} />
                             </div>
                             <div>
-                                <span className={styles.balanceEqv}>{helpers.aceItToEther(totalBalance)} Eth</span>
+                                <span className={styles.balanceEqv}>{helpers.aceItToEther(totalBalance)} Metis</span>
                             </div>
                         </div>
                         <button onClick={() => router.push(routes.Widthraw)} className={styles.button}>Widthraw</button>

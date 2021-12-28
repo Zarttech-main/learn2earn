@@ -22,7 +22,7 @@ const Wallet = () => {
             <div className={Styles.pageWrapper}>
                 <h1 className={Styles.pageTitle}>My Wallet</h1>
                 <div className={Styles.formWrapper}>
-                    <h2>My Ethereum wallet address</h2>
+                    <h2>My wallet address</h2>
                     <form onSubmit={handleSubmit}>
                         <div className={FormControls.formGroup}>
                             <input type="text" className={FormControls.formControl} id="walletAddress" name="walletAddress" value={walletAddress}
