@@ -47,6 +47,22 @@ const purchaseTokens = async ( { amount, account } ) => {
     }
 }
 
+const redeemTokens = async ({ amount }) => {
+    try {
+        //get a contract instance
+        const contract = _getContract();
+        const address = localStorage.getItem("wallet");
+        const account = getAccount();
+
+        // call a contract function
+        const trx = await contract?.RedeemTokens(address, ethers.utils.parseEther(amount.toString()));
+
+        return trx.hash;
+    } catch (err) {
+        console.log(err);
+    }
+}
+
 // function getAccounts (callback) {
 //     web3.eth.getAccounts((error,result) => {
 //         if (error) {
@@ -150,5 +166,6 @@ const purchaseTokens = async ( { amount, account } ) => {
 
 export default {
     getAccount,
-    purchaseTokens
+    redeemTokens,
+    purchaseTokens,
 }

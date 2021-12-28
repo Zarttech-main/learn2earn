@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { earnings } from "../../utils/constants";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt } from '@fortawesome/free-solid-svg-icons';
+import contractApi from "../api/ether";
 
 const WithdrawToken = () => {
     const router = useRouter();
@@ -27,13 +28,17 @@ const WithdrawToken = () => {
         setWalletAddress(wallet);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if(!etherAmount) return alert("Enter amount")
         if(balance < helpers.etherToAceIt(etherAmount)){
             alert("Insuffient Funds")
             return
         }
+
+        const trx = await contractApi.redeemTokens({ amount : etherAmount });
+        if(!trx) return alert("Tracsaction failed");
+        localStorage.setItem("redeemTrx", trx);
         
         router.push(routes.WidthrawSuccess);
     }
