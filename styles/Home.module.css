@@ -22,15 +22,15 @@
   color: var(--secondary-color);
 }
 .logo {
-  height: 100px;
-  width: 170px;
+  width: 270px;
+  height: 200px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 170px 100px;
-  background-image: url(../public/ag-logo.png);
+  background-size: 270px 250px;
+  background-image: url(../public/logo.jpg);
 }
 .intro {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 155.19%;
 }
