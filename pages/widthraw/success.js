@@ -22,7 +22,7 @@ const Success = () => {
             <Base>
                 <div className={styles.title}>
                     <h4 className={styles.title}>Successfully Widthrawn</h4>
-                    <span className={styles.success}><a href={`https://rinkeby.etherscan.io/tx/${trx}`}>Click here to view the transaction on the explorer</a></span>
+                    <span className={styles.success}><a target="_blank" href={`https://rinkeby.etherscan.io/tx/${trx}`}>Click here to view the transaction on the explorer</a></span>
                 </div>
                 <div className={styles.image}><FontAwesomeIcon icon={faCheckCircle} height={300}></FontAwesomeIcon></div>
                 <div className={styles.button}>

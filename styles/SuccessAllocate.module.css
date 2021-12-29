@@ -33,3 +33,9 @@
     padding: 20px 40px;
     width: 200px;
 }
+
+.success {
+    font-size: 14px;
+    margin-left: 470px;
+    color: var(--primary-color);
+}
