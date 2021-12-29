@@ -65,7 +65,6 @@ const redeemTokens = async ({ amount }) => {
 
 const setTest = async ({ testid, testreward, studentsSize }) => {
     try {
-        console.log('ll: ', testid, testreward, studentsSize);
         //get a contract instance
         const contract = _getContract();
 
@@ -80,9 +79,28 @@ const setTest = async ({ testid, testreward, studentsSize }) => {
     }
 }
 
+const claimReward = async ({ amount }) => {
+    try {
+        //get a contract instance
+        const contract = _getContract();
+
+        const account = getAccount();
+        const wallet = localStorage.getItem("wallet");
+
+        // call a contract function
+        const trx = await contract?.claimReward(account, ethers.utils.parseEther(amount.toString()), 10);
+        if(!trx) return;
+
+        return trx.hash;
+    } catch(err) {
+        return err.error
+    }
+}
+
 export default {
+    setTest,
     getAccount,
+    claimReward,
     redeemTokens,
     purchaseTokens,
-    setTest,
 }
