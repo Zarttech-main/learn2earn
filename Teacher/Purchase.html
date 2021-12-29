@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/web3.min.js"></script>
+
+    <script type="text/javascript">
+
+        const abi=[
+	{
+	    "inputs": [
+			{
+			    "internalType": "string",
+			    "name": "name_",
+			    "type": "string"
+			},
+			{
+			    "internalType": "string",
+			    "name": "symbol_",
+			    "type": "string"
+			}
+	    ],
+	    "stateMutability": "nonpayable",
+	    "type": "constructor"
+	},
+	{
+	    "anonymous": false,
+	    "inputs": [
+			{
+			    "indexed": true,
+			    "internalType": "address",
+			    "name": "owner",
+			    "type": "address"
+			},
+			{
+			    "indexed": true,
+			    "internalType": "address",
+			    "name": "spender",
+			    "type": "address"
+			},
+			{
+			    "indexed": false,
+			    "internalType": "uint256",
+			    "name": "value",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "Approval",
+	    "type": "event"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "spender",
+			    "type": "address"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "amount",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "approve",
+	    "outputs": [
+			{
+			    "internalType": "bool",
+			    "name": "",
+			    "type": "bool"
+			}
+	    ],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "uint256",
+			    "name": "amount",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "burn",
+	    "outputs": [],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "studentaccount",
+			    "type": "address"
+			},
+			{
+			    "internalType": "string",
+			    "name": "testid",
+			    "type": "string"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "amount",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "claimReward",
+	    "outputs": [],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "spender",
+			    "type": "address"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "subtractedValue",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "decreaseAllowance",
+	    "outputs": [
+			{
+			    "internalType": "bool",
+			    "name": "",
+			    "type": "bool"
+			}
+	    ],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "spender",
+			    "type": "address"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "addedValue",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "increaseAllowance",
+	    "outputs": [
+			{
+			    "internalType": "bool",
+			    "name": "",
+			    "type": "bool"
+			}
+	    ],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "purchaseTokens",
+	    "outputs": [],
+	    "stateMutability": "payable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address payable",
+			    "name": "_to",
+			    "type": "address"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "amount",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "RedeemTokens",
+	    "outputs": [],
+	    "stateMutability": "payable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "account",
+			    "type": "address"
+			},
+			{
+			    "internalType": "string",
+			    "name": "testid",
+			    "type": "string"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "testreward",
+			    "type": "uint256"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "noofstudents",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "setTest",
+	    "outputs": [],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "recipient",
+			    "type": "address"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "amount",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "transfer",
+	    "outputs": [
+			{
+			    "internalType": "bool",
+			    "name": "",
+			    "type": "bool"
+			}
+	    ],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "anonymous": false,
+	    "inputs": [
+			{
+			    "indexed": true,
+			    "internalType": "address",
+			    "name": "from",
+			    "type": "address"
+			},
+			{
+			    "indexed": true,
+			    "internalType": "address",
+			    "name": "to",
+			    "type": "address"
+			},
+			{
+			    "indexed": false,
+			    "internalType": "uint256",
+			    "name": "value",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "Transfer",
+	    "type": "event"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "sender",
+			    "type": "address"
+			},
+			{
+			    "internalType": "address",
+			    "name": "recipient",
+			    "type": "address"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "amount",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "transferFrom",
+	    "outputs": [
+			{
+			    "internalType": "bool",
+			    "name": "",
+			    "type": "bool"
+			}
+	    ],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "string",
+			    "name": "testid",
+			    "type": "string"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "amount",
+			    "type": "uint256"
+			}
+	    ],
+	    "name": "withdrawTokens",
+	    "outputs": [],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "owner",
+			    "type": "address"
+			},
+			{
+			    "internalType": "address",
+			    "name": "spender",
+			    "type": "address"
+			}
+	    ],
+	    "name": "allowance",
+	    "outputs": [
+			{
+			    "internalType": "uint256",
+			    "name": "",
+			    "type": "uint256"
+			}
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "address",
+			    "name": "account",
+			    "type": "address"
+			}
+	    ],
+	    "name": "balanceOf",
+	    "outputs": [
+			{
+			    "internalType": "uint256",
+			    "name": "",
+			    "type": "uint256"
+			}
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "decimals",
+	    "outputs": [
+			{
+			    "internalType": "uint8",
+			    "name": "",
+			    "type": "uint8"
+			}
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+			{
+			    "internalType": "string",
+			    "name": "testid",
+			    "type": "string"
+			}
+	    ],
+	    "name": "getTestBalance",
+	    "outputs": [
+			{
+			    "internalType": "string",
+			    "name": "",
+			    "type": "string"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "",
+			    "type": "uint256"
+			},
+			{
+			    "internalType": "uint256",
+			    "name": "",
+			    "type": "uint256"
+			}
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "name",
+	    "outputs": [
+			{
+			    "internalType": "string",
+			    "name": "",
+			    "type": "string"
+			}
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "symbol",
+	    "outputs": [
+			{
+			    "internalType": "string",
+			    "name": "",
+			    "type": "string"
+			}
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "totalSupply",
+	    "outputs": [
+			{
+			    "internalType": "uint256",
+			    "name": "",
+			    "type": "uint256"
+			}
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	}
+        ]
+        const contractaddress="0xf91c2Fdc5382f2B04Ab4ecde0B04c2eA4F32eEE1";
+            
+      
+       
+        window.onload=function() {
+          
+         
+           
+        
+            this.bootstrapWeb3();
+            
+          
+        }
+
+        function  enableAccounts() {
+            if (window.ethereum) {
+                window.web3 = new Web3(ethereum);
+                try {
+                    // Request account access if needed
+                    //Alter
+                    ethereum.enable();
+
+                    // get Logged in Account
+                    getAccounts(function(result) {
+                        var account= result[0];
+                        document.getElementById("metamask").innerHTML="account is " + account;
+
+                        // Get Account Balance
+                        web3.eth.getBalance(account,function(error,result){
+
+                            if(error){
+                                console.log(error)
+                            }
+                            else{
+                                document.getElementById("ethbalance").innerHTML="Eth balance is " + web3.utils.fromWei( result , 'ether');
+                            }
+                        });
+
+                        // get pool Balance
+                        web3.eth.getBalance(contractaddress,function(error,result){
+
+                            if(error){
+                                console.log(error)
+                            }
+                            else{
+                                document.getElementById("poolbalance").innerHTML= web3.utils.fromWei( result , 'ether') + " Eth";
+                            }
+                        });
+                       
+                        getTokenBalance();
+                        
+                    });
+                    
+                   
+                 
+
+
+                } catch (error) {
+                    // Alter User denied account access...
+
+                }
+            }
+        }
+
+        function getAccounts(callback) {
+            web3.eth.getAccounts((error,result) => {
+                if (error) {
+                    console.log(error);
+                } else {
+                    callback(result);
+                }
+            });
+        }
+        
+        function bootstrapWeb3() {
+          
+            // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+            if (typeof window.web3 !== 'undefined') {
+                // Use Mist/MetaMask's provider
+                this.web3 = new Web3(new Web3(window.web3.currentProvider));
+            } else {
+                console.log('No web3? You should consider trying MetaMask!');
+                // Hack to provide backwards compatibility for Truffle, which uses web3js 0.20.x
+                Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
+                // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+                this.web3 = new Web3(new Web3.providers.HttpProvider(environment.RPCProvider));
+            }
+
+          
+          
+         
+          
+            // setInterval(this.refreshAccounts, 500);
+            // check if privacy mode is activated and request access
+          
+            this.enableAccounts().then(() => {
+             
+              
+
+                this.refreshAccounts();
+
+               
+                
+            });
+           
+        }
+
+
+        function refreshAccounts() {
+            if (typeof window.web3 !== 'undefined') {
+                this.web3.eth.getAccounts((err, accs) => {
+                    // console.log('Observed new accounts accs',accs);
+                    console.log(' this.getProviderName ',
+                      this.web3.givenProvider.networkVersion,
+                    );
+                    if (this.web3.givenProvider.networkVersion !== '4') {
+                        let linkTestnet = 'https://docs.binance.org/smart-chain/wallet/metamask.html#connect-your-metamask-with-binance-smart-chain'
+                        alert('Connect your  MetaMask wallet to Rinkeby testnet network!  \n  \n ');
+                    }
+
+                    if (err != null) {
+                        console.warn('There was an error fetching your accounts.');
+                        return;
+                    }
+
+                    // Get the initial account balance so it can be displayed.
+                    if (accs.length === 0) {
+                        console.warn('Couldn\'t get any accounts! Make sure your Ethereum client is configured correctly.');
+                        return;
+                    }
+
+                    if (!this.accounts || this.accounts.length !== accs.length || this.accounts[0] !== accs[0]) {
+                        console.log('Observed new accounts', accs);
+
+                        this.accountsObservable.next(accs);
+                        this.accounts = accs;
+                        localStorage.setItem("userAccount", this.accounts[0])
+                        console.log('Observed new accounts', this.accounts);
+                    }
+
+                    this.ready = true;
+                });
+            }
+        };
+     
+       
+        var tokenbalance;
+        function getTokenBalance(){
+           
+            var contract = new web3.eth.Contract(abi,contractaddress);
+           
+            getAccounts(function(result) {
+                var account= result[0];
+                var tokensymbol;
+                contract.methods.symbol().call().then(function (symbol) {
+                    tokensymbol=symbol ;
+                });
+
+                contract.methods.balanceOf(account).call().then(function (result) {
+                    tokenbalance=web3.utils.fromWei(result, 'ether');
+                    document.getElementById("tokenbalance").innerHTML="Token Balance "+ tokenbalance + " " + tokensymbol ;
+                });
+
+           
+            });
+     
+        }
+
+        function purchase() {
+
+          
+
+            var contract = new web3.eth.Contract(abi,contractaddress);
+           
+          
+
+            getAccounts(function(result) {
+                var account= result[0];
+                
+                var amount= web3.utils.toWei(  document.getElementById("txtdeposit").value, 'ether');
+              
+                contract.methods.purchaseTokens().send({to:contractaddress, from: account, gas:400000,value:amount }, function (error, transactonHash) {
+                    console.log(transactonHash);
+                });
+            });   
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="row p-4">
+        <div class="col-md-4">
+            <h1>Aceit(Teacher)</h1>
+
+            <div id="metamask"></div>
+            <div id="ethbalance"></div>
+            <div id="tokenbalance"></div>
+            <div id="minuteselapsed"></div>
+            <div id="dayselapsed"></div>
+            <div id="prevbalance"></div>
+
+        </div>
+        <div class="col-md-8 p-2">
+            <table>
+                <tr>
+                    <td>
+                        <a class="btn btn-info ">Index</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-info">Purchase Tokens</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-info">Set Test</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-info">Withdraw Tokens</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row p-5">
+        <center><h2>Purchase Tokens</h2>
+
+        <br /><br />
+         ether amount to send
+            <input id="txtdeposit" type="text" />
+        <br /><br /><br />
+            <a class="btn btn-info"  onclick="purchase()" >Make Purchase</a>
+        </center>
+    </div>
+</body>
+</html>
