@@ -40,7 +40,7 @@ const Earnings = () => {
                                 <span className={styles.balanceEqv}>{helpers.aceItToEther(totalBalance)} Metis</span>
                             </div>
                         </div>
-                        <button onClick={() => router.push(routes.Widthraw)} className={styles.button}>Widthraw</button>
+                        <button onClick={() => router.push(routes.Widthraw)} className={styles.button}>Withdraw</button>
                     </header>
                     <div className={styles.content}>
                         {

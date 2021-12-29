@@ -15,10 +15,10 @@ const Home = () => {
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1 className={styles.title}>Welcome to <span>Learn</span>2<span>Earn</span></h1>
+          <h1 className={styles.title}>Welcome to</h1>
           <div className={styles.logo}></div>
           <span className={styles.intro}>
-            We Incentivise Learning with Rewards through simple yet effective, Smart Contract Challenges
+            Where we Incentivise Learning with Rewards through simple yet effective, Smart Contract Challenges
           </span>
           <Button title="Get Started" onClick={() => router.push(routes.Login)} />
         </main>
